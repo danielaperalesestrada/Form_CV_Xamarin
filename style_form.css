@@ -1,0 +1,69 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #648ec1; 
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button[type="button"],
+input[type="submit"] {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(#6e91cf, #83a4d4); /* Degradado */
+    color: #fff; /* Letras blancas */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+button[type="button"]:hover,
+input[type="submit"]:hover {
+    background: linear-gradient(#597dbd, #6e91cf); /* Degradado al hacer hover */
+}
+
+/* Resaltar botón de enviar */
+input[type="submit"] {
+    background: linear-gradient(#4f7faa, #648ec1); /* Degradado */
+    color: #fff; /* Letras blancas */
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(#648ec1, #7ca1d5); /* Degradado al hacer hover */
+}
