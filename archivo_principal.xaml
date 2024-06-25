@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TuProyecto"
+             x:Class="TuProyecto.ArchivoPrincipal">
+
+    <ContentPage.BindingContext>
+        <local:DatosCurriculum />
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <!-- Encabezado -->
+        <StackLayout BackgroundColor="#333" Padding="20" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+            <Image Source="img.jpg" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="{Binding Nombre}" FontSize="Large" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="{Binding Ocupacion}" FontSize="Medium" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
+
+        <!-- Información de contacto -->
+        <StackLayout Margin="20">
+            <Label Text="Contacto" FontSize="Large" HorizontalOptions="StartAndExpand" VerticalOptions="Start"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Teléfono: " FontSize="Medium"/>
+                <Label Text="{Binding Telefono}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Correo: " FontSize="Medium"/>
+                <Label Text="{Binding Correo}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Lugar: " FontSize="Medium"/>
+                <Label Text="{Binding Lugar}" FontSize="Medium"/>
+            </StackLayout>
+        </StackLayout>
+
+        <!-- Idiomas -->
+        <StackLayout Margin="20">
+            <Label Text="Idiomas" FontSize="Large"/>
+            <ListView ItemsSource="{Binding Idiomas}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding}" FontSize="Medium"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+        <!-- Aptitudes -->
+        <StackLayout Margin="20">
+            <Label Text="Aptitudes" FontSize="Large"/>
+            <ListView ItemsSource="{Binding Aptitudes}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding}" FontSize="Medium"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+        <!-- Habilidades -->
+        <StackLayout Margin="20">
+            <Label Text="Habilidades" FontSize="Large"/>
+            <ListView ItemsSource="{Binding Habilidades}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding}" FontSize="Medium"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+        <!-- Lenguajes -->
+        <StackLayout Margin="20">
+            <Label Text="Lenguajes" FontSize="Large"/>
+            <ListView ItemsSource="{Binding Lenguajes}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding}" FontSize="Medium"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>
